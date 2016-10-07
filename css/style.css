@@ -1,0 +1,31 @@
+body{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1ffff+0,e1ffff+7,e1ffff+12,e6f8fd+30,bee4f8+75,c8eefb+100,b1d8f5+100 */
+background: #e1ffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #e1ffff 0%, #e1ffff 7%, #e1ffff 12%, #e6f8fd 30%, #bee4f8 75%, #c8eefb 100%, #b1d8f5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#e6f8fd 30%,#bee4f8 75%,#c8eefb 100%,#b1d8f5 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#e6f8fd 30%,#bee4f8 75%,#c8eefb 100%,#b1d8f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#b1d8f5',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+.catLyf{
+
+}
+
+.cat{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/ac/20/db/ac20db833c0fa8694b3b017a4aabd55e.jpg');
+   border-style: solid;
+   border-radius: 25px;
+   border-width: 5px;
+   font-family: 'Lobster', cursive;
+   margin-bottom: 1em;
+   font-size: -webkit-xxx-large;
+   height: 6.25em;
+   width: 20em;
+}
+
+.cat img{
+	float: left;
+	border-radius: 18px;
+}

@@ -71,8 +71,7 @@
 			return React.createElement(
 				'div',
 				{ className: 'catLyf' },
-				React.createElement(Stream, null),
-				React.createElement(Sidebar, null)
+				React.createElement(Stream, null)
 			);
 		}
 	});
@@ -81,12 +80,26 @@
 
 /***/ },
 /* 4 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
+
+	var Cat = __webpack_require__(5);
+
+	var dummyCats = [{
+		pic: "https://fillmurray.com/300/300",
+		fact: 'A cat lives an average of 1000 years'
+
+	}, {
+		pic: "https://fillmurray.com/300/301",
+		fact: 'A cat was trying to jump through a window'
+	}, {
+		pic: "https://fillmurray.com/301/300",
+		fact: 'A cat used to poo on my bed daily'
+	}];
 
 	var Stream = React.createClass({
-		displayName: "Stream",
+		displayName: 'Stream',
 
 
 		getInitialState: function getInitialState() {
@@ -97,16 +110,41 @@
 
 		render: function render() {
 			return React.createElement(
-				"div",
-				{ className: "stream" },
+				'div',
+				{ className: 'stream' },
 				this.state.cats.map(function (cat, i) {
-					return React.createElement(Cat, { key: i });
+					return React.createElement(Cat, { key: i, pic: cat.pic, fact: cat.fact, catId: i });
 				})
 			);
 		}
 	});
 
 	module.exports = Stream;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var Cat = React.createClass({
+		displayName: "Cat",
+
+		render: function render() {
+			return React.createElement(
+				"div",
+				{ className: "cat", id: this.props.catId },
+				React.createElement("img", { src: this.props.pic }),
+				React.createElement(
+					"span",
+					null,
+					this.props.fact
+				)
+			);
+		}
+	});
+
+	module.exports = Cat;
 
 /***/ }
 /******/ ]);
