@@ -44,7 +44,13 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
+
+	ReactDOM.render(React.createElement(
+	  'h1',
+	  null,
+	  'Hiya'
+	), document.getElementById('container'));
 
 /***/ }
 /******/ ]);
