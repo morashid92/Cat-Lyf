@@ -5,7 +5,7 @@ var CatLyf = React.createClass({
 		return (
 			<div className="catLyf">
 				<Stream />
-				<Sidebar />
+				
 			</div>
 			)
 	}
