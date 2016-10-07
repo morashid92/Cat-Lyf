@@ -1,4 +1,5 @@
+var CatLyf = require('./catLyf.jsx');
 ReactDOM.render(
-<h1>Hiya</h1>,
+	<CatLyf />,
 document.getElementById('container')
 );

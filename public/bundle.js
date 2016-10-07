@@ -42,15 +42,71 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	ReactDOM.render(React.createElement(
-	  'h1',
-	  null,
-	  'Hiya'
-	), document.getElementById('container'));
+	var CatLyf = __webpack_require__(3);
+	ReactDOM.render(React.createElement(CatLyf, null), document.getElementById('container'));
+
+/***/ },
+/* 1 */,
+/* 2 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var Stream = __webpack_require__(4);
+	var Sidebar = __webpack_require__(2);
+	var CatLyf = React.createClass({
+		displayName: 'CatLyf',
+
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'catLyf' },
+				React.createElement(Stream, null),
+				React.createElement(Sidebar, null)
+			);
+		}
+	});
+
+	module.exports = CatLyf;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	var Stream = React.createClass({
+		displayName: "Stream",
+
+
+		getInitialState: function getInitialState() {
+			return {
+				cats: dummyCats
+			};
+		},
+
+		render: function render() {
+			return React.createElement(
+				"div",
+				{ className: "stream" },
+				this.state.cats.map(function (cat, i) {
+					return React.createElement(Cat, { key: i });
+				})
+			);
+		}
+	});
+
+	module.exports = Stream;
 
 /***/ }
 /******/ ]);
